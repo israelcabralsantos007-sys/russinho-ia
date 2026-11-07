@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Russinho IA | Sites e automações com IA</title>
+<meta name="description" content="Sites, landing pages e automações com IA para pequenos negócios. Entrega rápida e orçamento grátis pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070914;--bg2:#0e1330;--card:#121838;--line:#232b57;--txt:#f3f5ff;--muted:#a6aed3;--cyan:#22e4ff;--violet:#7c5cff;--grad:linear-gradient(135deg,var(--cyan),var(--violet))}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.55}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:14px;font-weight:700;font-size:16px;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn-main{background:var(--grad);color:#070914;box-shadow:0 10px 30px -10px rgba(34,228,255,.6)}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 16px 36px -10px rgba(34,228,255,.75)}
+.btn-ghost{border:1px solid var(--line);color:var(--txt);background:transparent}
+.btn-ghost:hover{border-color:var(--cyan)}
+header{position:sticky;top:0;z-index:10;background:rgba(7,9,20,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;letter-spacing:-.5px}
+.nav .btn{padding:10px 18px;font-size:14px}
+.hero{padding:90px 0 70px;background:radial-gradient(800px 400px at 50% 0%,rgba(124,92,255,.25),transparent 70%)}
+.tag{display:inline-block;padding:7px 14px;border:1px solid var(--line);border-radius:99px;color:var(--cyan);font-size:13px;font-weight:600;margin-bottom:22px}
+h1{font-size:clamp(36px,6vw,62px);line-height:1.06;font-weight:900;letter-spacing:-1.5px;max-width:820px}
+.hero p{font-size:19px;color:var(--muted);max-width:620px;margin:22px 0 34px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.trust{display:flex;flex-wrap:wrap;gap:22px;margin-top:38px;color:var(--muted);font-size:14px}
+.trust span::before{content:"✓ ";color:var(--cyan);font-weight:700}
+section{padding:76px 0}
+h2{font-size:clamp(28px,4vw,40px);font-weight:900;letter-spacing:-1px;margin-bottom:12px}
+.sub{color:var(--muted);font-size:17px;max-width:620px;margin-bottom:40px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:rgba(34,228,255,.5);transform:translateY(-3px)}
+.icon{width:48px;height:48px;border-radius:14px;background:rgba(34,228,255,.12);display:grid;place-items:center;font-size:24px;margin-bottom:18px}
+.card h3{font-size:20px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px}
+.card ul{list-style:none;margin-top:14px;color:var(--muted);font-size:14px}
+.card li{padding:4px 0}
+.card li::before{content:"→ ";color:var(--cyan)}
+.steps{counter-reset:s}
+.step{position:relative;padding-left:64px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:44px;height:44px;border-radius:12px;background:var(--grad);color:#070914;font-weight:900;display:grid;place-items:center;font-size:18px}
+.step h3{font-size:18px;margin-bottom:6px}
+.step p{color:var(--muted);font-size:15px}
+.work{overflow:hidden;padding:0}
+.thumb{height:180px;display:grid;place-items:center;font-weight:900;font-size:22px;color:#070914}
+.work .body{padding:22px}
+.badge{display:inline-block;font-size:12px;font-weight:600;color:var(--cyan);border:1px solid var(--line);border-radius:99px;padding:3px 10px;margin-bottom:10px}
+.quote-box{background:var(--bg2);border:1px solid var(--line);border-radius:24px;padding:38px;display:grid;gap:30px;grid-template-columns:1fr 1fr}
+@media(max-width:760px){.quote-box{grid-template-columns:1fr;padding:26px}}
+label{display:block;font-size:14px;font-weight:600;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--txt);font:inherit;font-size:15px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--cyan);border-color:transparent}
+textarea{resize:vertical;min-height:90px}
+#wa-link{display:none;margin-top:16px}
+.note{font-size:13px;color:var(--muted);margin-top:10px}
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none}
+summary::after{content:"+";float:right;color:var(--cyan);font-size:20px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{color:var(--muted);margin-top:10px;font-size:15px}
+.final{text-align:center;background:radial-gradient(600px 300px at 50% 100%,rgba(34,228,255,.18),transparent 70%)}
+.final .sub{margin:0 auto 30px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.float-wa{position:fixed;right:18px;bottom:18px;z-index:20;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(37,211,102,.7)}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap nav">
+<a href="#inicio" class="brand"><svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22e4ff"/><stop offset="1" stop-color="#7c5cff"/></linearGradient></defs><rect width="100" height="100" rx="26" fill="url(#lg)"/><rect x="14" y="14" width="72" height="72" rx="18" fill="#070914"/><text x="50" y="68" text-anchor="middle" font-family="Inter" font-weight="900" font-size="46" fill="#fff">R</text></svg><span>R<span class="grad">IA</span></span></a>
+<a class="btn btn-main" href="#orcamento">Orçamento grátis</a>
+</div>
+</header>
+<main id="inicio">
+<section class="hero"><div class="wrap">
+<span class="tag">⚡ Sites e automações com Inteligência Artificial</span>
+<h1>Seu negócio online e vendendo <span class="grad">em poucos dias</span>, não em meses.</h1>
+<p>Eu sou o Russinho, programador. Uso IA para criar sites, landing pages e automações que trazem clientes, com a qualidade de quem programa e a velocidade da IA.</p>
+<div class="cta-row"><a class="btn btn-main" href="#orcamento">Quero meu orçamento grátis →</a><a class="btn btn-ghost" href="#portfolio">Ver projetos</a></div>
+<div class="trust"><span>Entrega rápida</span><span>Funciona no celular</span><span>Suporte depois da entrega</span><span>Atendo todo o Brasil</span></div>
+</div></section>
+<section id="servicos"><div class="wrap">
+<h2>O que eu faço por você</h2>
+<p class="sub">Escolha o que o seu negócio precisa agora. Se não souber, me chama que eu te ajudo a decidir.</p>
+<div class="grid">
+<div class="card"><div class="icon">🌐</div><h3>Site profissional</h3><p>Site completo para apresentar seu negócio e passar confiança.</p><ul><li>Design moderno e rápido</li><li>Botão direto pro WhatsApp</li><li>Aparece no Google</li></ul></div>
+<div class="card"><div class="icon">🎯</div><h3>Landing page de vendas</h3><p>Uma página feita para transformar visitante em cliente.</p><ul><li>Ideal para anúncios e Instagram</li><li>Texto persuasivo incluso</li><li>Pronta para tráfego pago</li></ul></div>
+<div class="card"><div class="icon">🤖</div><h3>Automações com IA</h3><p>Tarefas repetitivas fazendo-se sozinhas enquanto você vende.</p><ul><li>Atendimento automático</li><li>Respostas no direct e WhatsApp</li><li>Planilhas e relatórios automáticos</li></ul></div>
+</div></div></section>
+<section id="como"><div class="wrap">
+<h2>Como funciona</h2>
+<p class="sub">Simples, rápido e sem complicação técnica do seu lado.</p>
+<div class="grid steps">
+<div class="step"><h3>Você me conta a ideia</h3><p>Uma conversa rápida pelo WhatsApp sobre o seu negócio e o que você precisa.</p></div>
+<div class="step"><h3>Eu crio com IA</h3><p>Monto a primeira versão rápido e te mostro antes de finalizar.</p></div>
+<div class="step"><h3>Ajustes e entrega</h3><p>Fazemos os ajustes juntos e seu projeto vai pro ar pronto para vender.</p></div>
+</div></div></section>
+<section id="portfolio"><div class="wrap">
+<h2>Projetos</h2>
+<p class="sub">Alguns tipos de projeto que eu entrego.</p>
+<div class="grid">
+<div class="card work"><div class="thumb" style="background:linear-gradient(135deg,#ffb86b,#ff6b9a)">Loja / Comércio</div><div class="body"><span class="badge">Site</span><h3>Site para comércio local</h3><p>Vitrine dos produtos, localização e pedido direto pelo WhatsApp.</p></div></div>
+<div class="card work"><div class="thumb" style="background:var(--grad)">Infoproduto</div><div class="body"><span class="badge">Landing page</span><h3>Página de vendas</h3><p>Estrutura com oferta, benefícios, dúvidas e botão de compra.</p></div></div>
+<div class="card work"><div class="thumb" style="background:linear-gradient(135deg,#5ef0a5,#22e4ff)">Atendimento</div><div class="body"><span class="badge">Automação</span><h3>Atendimento automático</h3><p>Respostas e triagem de clientes 24h, sem você ficar no celular.</p></div></div>
+</div></div></section>
+<section id="orcamento"><div class="wrap"><div class="quote-box">
+<div><h2>Peça seu orçamento <span class="grad">grátis</span></h2><p class="sub" style="margin-bottom:18px">Responda 3 perguntas e a mensagem já vai pronta pro meu WhatsApp. Sem compromisso.</p><p class="note">Respondo em até 24 horas · WhatsApp (61) 98375-1008</p></div>
+<form id="quote" novalidate>
+<label for="nome">Seu nome</label><input id="nome" required placeholder="Ex.: Ana">
+<label for="tipo">O que você precisa?</label>
+<select id="tipo"><option>Site profissional</option><option>Landing page de vendas</option><option>Automação com IA</option><option>Ainda não sei, quero ajuda</option></select>
+<label for="negocio">Conte sobre o seu negócio</label>
+<textarea id="negocio" placeholder="Ex.: tenho uma loja de roupas e quero vender pelo Instagram"></textarea>
+<button class="btn btn-main" type="submit" style="margin-top:18px;width:100%;justify-content:center">Gerar minha mensagem →</button>
+<a id="wa-link" class="btn btn-ghost" target="_blank" rel="noopener" style="width:100%;justify-content:center">Abrir no WhatsApp</a>
+<p id="wa-text" class="note"></p>
+</form>
+</div></div></section>
+<section id="duvidas"><div class="wrap" style="max-width:760px">
+<h2>Dúvidas frequentes</h2>
+<p class="sub">Se a sua não estiver aqui, me chama no WhatsApp.</p>
+<details><summary>Quanto custa?</summary><p>Depende do tamanho do projeto. Você recebe o valor fechado no orçamento, antes de começar, sem surpresa.</p></details>
+<details><summary>Quanto tempo demora?</summary><p>Projetos simples ficam prontos em poucos dias. O prazo exato vai junto com o orçamento.</p></details>
+<details><summary>Preciso entender de tecnologia?</summary><p>Não. Eu cuido de tudo e te entrego funcionando, com explicação simples de como usar.</p></details>
+<details><summary>E se eu quiser mudar algo depois?</summary><p>Os ajustes combinados estão inclusos, e depois da entrega você continua tendo suporte.</p></details>
+</div></section>
+<section class="final"><div class="wrap">
+<h2>Bora colocar seu negócio <span class="grad">pra vender</span>?</h2>
+<p class="sub">O primeiro passo é uma conversa de 5 minutos.</p>
+<a class="btn btn-main" href="#orcamento">Quero meu orçamento grátis →</a>
+</div></section>
+</main>
+<footer><div class="wrap"><span>© 2026 Russinho IA · Sites e automações com IA</span><span>Instagram: @russinho.ia · WhatsApp: (61) 98375-1008</span></div></footer>
+<a class="float-wa" id="float-wa" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3 1 2.6 1.1 2.7.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<script>
+const WHATS = "5561983751008";
+const base = "https://wa.me/" + WHATS;
+document.getElementById("float-wa").href = base + "?text=" + encodeURIComponent("Oi, Russinho! Vim pelo site e quero um orçamento.");
+document.getElementById("quote").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const nome = document.getElementById("nome").value.trim() || "(sem nome)";
+  const tipo = document.getElementById("tipo").value;
+  const neg = document.getElementById("negocio").value.trim() || "(não informado)";
+  const msg = "Oi, Russinho! Sou " + nome + ".\nPreciso de: " + tipo + ".\nMeu negócio: " + neg;
+  const link = document.getElementById("wa-link");
+  link.href = base + "?text=" + encodeURIComponent(msg);
+  link.style.display = "flex";
+  document.getElementById("wa-text").textContent = "Mensagem pronta! Toque em \"Abrir no WhatsApp\" para enviar.";
+});
+</script>
+</body>
+</html>
